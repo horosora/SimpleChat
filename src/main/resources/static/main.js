@@ -18,12 +18,13 @@ function disconnect() {
 }
 
 function send() {
+    var name = document.getElementById("name").value;
     var message = document.getElementById("message").value;
-    stompClient.send("/app/endpoint", {}, JSON.stringify({"message": message}));
+    stompClient.send("/app/endpoint", {}, JSON.stringify({"name": name, "message": message}));
 }
 
 function showMessage(data) {
-    $("#chat").append("<p>" + data.message + "</p>");
+    $("#chat").append("<p>" + data.name + "<br>" + data.message + "</p>");
 }
 
 connect();

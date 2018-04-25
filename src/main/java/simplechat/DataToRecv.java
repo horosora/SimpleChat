@@ -1,12 +1,22 @@
 package simplechat;
 
 public class DataToRecv {
+    private String name;
     private String message;
 
     public DataToRecv() {}
 
-    public DataToRecv(String message) {
+    public DataToRecv(String name, String message) {
+        this.name = name;
         this.message = message;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getMessage() {

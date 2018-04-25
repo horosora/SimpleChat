@@ -9,7 +9,10 @@ public class AppController {
 
     @MessageMapping("/endpoint")
     @SendTo("/topic/messages")
-    public DataToSend message(DataToRecv message) {
-        return new DataToSend("test: " + message.getMessage());
+    public DataToSend message(DataToRecv redvData) {
+        if (redvData.getName().isEmpty()) {
+            redvData.setName("名無しのスーパーハッカー");
+        }
+        return new DataToSend(redvData.getName(), redvData.getMessage());
     }
 }
