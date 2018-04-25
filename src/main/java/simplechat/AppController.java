@@ -28,6 +28,6 @@ public class AppController {
     }
 
     public String EscapeProcessing(String str) {
-        return str.replace("&", "&amp;").replace("\"", "&quot;").replace("<", "&lt;").replace(">", "&gt;").replace("'", "&#39;");
+        return str.replace("&", "&amp;").replace("\"", "&quot;").replace("<", "&lt;").replace(">", "&gt;").replace("'", "&#39;").replace(" ", "&nbsp").replace("\n", "<br>");
     }
 }
