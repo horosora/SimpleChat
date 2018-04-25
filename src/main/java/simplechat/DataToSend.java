@@ -3,12 +3,14 @@ package simplechat;
 public class DataToSend {
     private String name;
     private String message;
+    private String date;
 
     public DataToSend() {}
 
-    public DataToSend(String name, String message) {
+    public DataToSend(String name, String message, String date) {
         this.name = name;
         this.message = message;
+        this.date = date;
     }
 
     public String getName() {
@@ -25,5 +27,13 @@ public class DataToSend {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getDate() {
+        return this.date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

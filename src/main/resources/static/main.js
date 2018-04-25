@@ -24,7 +24,7 @@ function send() {
 }
 
 function showMessage(data) {
-    $("#chat").append("<p>" + data.name + "<br>" + data.message + "</p>");
+    $("#chat").append(data.date + "&nbsp&nbsp&nbsp&nbsp" + data.name + "<br>" + data.message + "<br><br>");
 }
 
 connect();
