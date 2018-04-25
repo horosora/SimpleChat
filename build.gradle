@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.1.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '2.0.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -20,16 +20,16 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.boot:spring-boot-starter-websocket')
-	compile('org.webjars:stomp-websocket:2.3.3')
-	compile('org.webjars:jquery:3.3.1')
-	compile('org.webjars:popper.js:1.14.1')
-	compile('org.webjars:bootstrap:4.1.0')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-websocket')
+    compile('org.webjars:stomp-websocket:2.3.3')
+    compile('org.webjars:jquery:3.3.1')
+    compile('org.webjars:popper.js:1.14.1')
+    compile('org.webjars:bootstrap:4.1.0')
 
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
