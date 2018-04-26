@@ -21,10 +21,11 @@ function send() {
     var name = document.getElementById("name").value;
     var message = document.getElementById("message").value;
     stompClient.send("/app/endpoint", {}, JSON.stringify({"name": name, "message": message}));
+    document.getElementById("message").value = "";
 }
 
 function showMessage(data) {
-    $("#chat").append(data.date + "&nbsp&nbsp&nbsp&nbsp" + data.name + "<br>" + data.message + "<br><br>");
+    $("#chat").append(data.date + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.name + "<br>" + data.message + "<br><br>");
 }
 
 connect();

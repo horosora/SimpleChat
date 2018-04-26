@@ -5,8 +5,6 @@ public class DataToSend {
     private String message;
     private String date;
 
-    public DataToSend() {}
-
     public DataToSend(String name, String message, String date) {
         this.name = name;
         this.message = message;
