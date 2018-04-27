@@ -1,3 +1,38 @@
 textarea {
     resize: none;
 }
+
+#chat {
+    height: 40vh;
+    overflow: auto;
+}
+
+#chat::-webkit-scrollbar {
+    overflow: hidden;
+    width: 8px;
+    background: #eee;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#chat::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+#chat::-webkit-scrollbar-button {
+    display: none;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #333;
+}
+
+#chat::-webkit-scrollbar-corner {
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #333;
+}
