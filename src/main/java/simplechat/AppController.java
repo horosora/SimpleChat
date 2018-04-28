@@ -13,26 +13,31 @@ public class AppController {
 
     @MessageMapping("/endpoint")
     @SendTo("/topic/messages")
-    public DataToSend message(DataToRecv redvData) {
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        String date = now.format(fmt);
+    public DataToSend messageProcessing(DataToRecv redvData) {
+        String name = redvData.getName();
+        String message = redvData.getMessage();
+        String time = getTime();
 
-        if (redvData.getName().isEmpty()) {
-            redvData.setName("名無しのスーパーハッカー");
+        if (name.isEmpty()) {
+            name = "名無しのスーパーハッカー";
         }
 
-        redvData.setName(escapeProcessing(redvData.getName()));
-        redvData.setMessage(escapeProcessing(redvData.getMessage()));
+        name = escape(name);
+        message = escape(message);
 
-        return new DataToSend(redvData.getName(), redvData.getMessage(), date);
+        return new DataToSend(name, message, time);
     }
 
-    private String escapeProcessing(String str) {
+    private String escape(String str) {
         String result = HtmlUtils.htmlEscape(str);
         result = result.replace(" ", "&nbsp;");
         result = result.replace("\n", "<br>");
-
         return result;
+    }
+
+    private String getTime() {
+        LocalDateTime time = LocalDateTime.now();
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        return time.format(fmt);
     }
 }

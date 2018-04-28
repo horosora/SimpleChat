@@ -4,13 +4,6 @@ public class DataToRecv {
     private String name;
     private String message;
 
-    public DataToRecv() {}
-
-    public DataToRecv(String name, String message) {
-        this.name = name;
-        this.message = message;
-    }
-
     public String getName() {
         return this.name;
     }
