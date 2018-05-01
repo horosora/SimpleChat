@@ -17,5 +17,5 @@ function send() {
 }
 
 function show(data) {
-    chat.innerHTML += data.date + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.name + "<br>" + data.message + "<br><br>";
+    chat.innerHTML += '<div class="chat-box-message">' + "[" + data.date + "]" + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.name + "<br>" + data.message + "</div>";
 }

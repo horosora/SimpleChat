@@ -13,9 +13,9 @@ public class AppController {
 
     @MessageMapping("/endpoint")
     @SendTo("/topic/messages")
-    public DataToSend messageProcessing(DataToRecv redvData) {
-        String name = redvData.getName();
-        String message = redvData.getMessage();
+    public DataToSend messageProcessing(DataToRecv data) {
+        String name = data.getName();
+        String message = data.getMessage();
         String time = getTime();
 
         if (name.isEmpty()) {
@@ -37,7 +37,7 @@ public class AppController {
 
     private String getTime() {
         LocalDateTime time = LocalDateTime.now();
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd - HH:mm:ss");
         return time.format(fmt);
     }
 }

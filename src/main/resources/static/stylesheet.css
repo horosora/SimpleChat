@@ -1,38 +1,50 @@
+body {
+    background-color: #edefef;
+}
+
 textarea {
     resize: none;
 }
 
-#chat {
-    height: 40vh;
+.chat-box {
+    height: 80vh;
     overflow: auto;
+    background-color: #ffffff;
 }
 
-#chat::-webkit-scrollbar {
+.chat-box-message {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.chat-box::-webkit-scrollbar {
     overflow: hidden;
     width: 8px;
-    background: #eee;
+    background: #ffffff;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 
-#chat::-webkit-scrollbar:horizontal {
+.chat-box::-webkit-scrollbar:horizontal {
     height: 5px;
 }
 
-#chat::-webkit-scrollbar-button {
+.chat-box::-webkit-scrollbar-button {
     display: none;
 }
 
-#chat::-webkit-scrollbar-thumb {
+.chat-box::-webkit-scrollbar-thumb {
     overflow: hidden;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: #333;
+    background: #a5a8aa;
 }
 
-#chat::-webkit-scrollbar-corner {
+.chat-box::-webkit-scrollbar-corner {
     overflow: hidden;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: #333;
+    background: #a5a8aa;
 }
