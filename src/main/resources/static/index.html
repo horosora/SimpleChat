@@ -1,39 +1,39 @@
 <!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Simple Chat</title>
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Simple Chat</a>
-</nav>
-<div class="container">
-    <div id="chat" class="chat-box m-3"></div>
-    <form class="form-row mb-3">
-        <div class="input-group col-4">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">name</span>
-            </div>
-            <input type="text" id="name" class="form-control" placeholder="名無しのスーパーハッカー">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Simple Chat</title>
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.1.0/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+            <a class="navbar-brand" href="#">Simple Chat</a>
+        </nav>
+        <div class="container">
+            <div id="chat" class="chat-box"></div>
+            <form class="form-row my-3">
+                <div class="input-group col-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">name</span>
+                    </div>
+                    <input type="text" id="name" class="form-control" placeholder="名無しのスーパーハッカー">
+                </div>
+                <div class="input-group col-8">
+                    <textarea type="text" id="message" class="form-control" rows="1"></textarea>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-outline-secondary" onclick="send()">send</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="input-group col-8">
-            <textarea type="text" id="message" class="form-control" rows="1"></textarea>
-            <div class="input-group-append">
-                <button type="button" class="btn btn-outline-secondary" onclick="send()">send</button>
-            </div>
-        </div>
-    </form>
-</div>
-<script type="text/javascript" src="/webjars/jquery/3.3.1/jquery.js"></script>
-<script type="text/javascript" src="/webjars/popper.js/1.14.1/umd/popper.js"></script>
-<script type="text/javascript" src="/webjars/bootstrap/4.1.0/js/bootstrap.js"></script>
-<script type="text/javascript" src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
-<script type="text/javascript" src="main.js"></script>
-</body>
+        <script type="text/javascript" src="/webjars/jquery/3.3.1/jquery.js"></script>
+        <script type="text/javascript" src="/webjars/popper.js/1.14.1/umd/popper.js"></script>
+        <script type="text/javascript" src="/webjars/bootstrap/4.1.0/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
 </html>
