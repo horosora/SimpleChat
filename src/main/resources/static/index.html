@@ -11,18 +11,18 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-            <a class="navbar-brand" href="#">Simple Chat</a>
+            <span class="navbar-brand mb-0 h1">Simple Chat</span>
         </nav>
         <div class="container">
-            <div id="chat" class="chat-box"></div>
-            <form class="form-row my-3">
-                <div class="input-group col-4">
+            <div id="chat" class="chat-box col-12"></div>
+            <form class="form-row mt-3">
+                <div class="form-group input-group col-12 col-lg-4">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">name</span>
                     </div>
                     <input type="text" id="name" class="form-control" placeholder="名無しのスーパーハッカー">
                 </div>
-                <div class="input-group col-8">
+                <div class="form-group input-group col-12 col-lg-8">
                     <textarea type="text" id="message" class="form-control" rows="1"></textarea>
                     <div class="input-group-append">
                         <button type="button" class="btn btn-outline-secondary" onclick="send()">send</button>
