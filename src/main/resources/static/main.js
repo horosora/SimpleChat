@@ -1,5 +1,8 @@
 var socket = new WebSocket("ws://" + location.host + "/endpoint");
 var stompClient = Stomp.over(socket);
+var formSize = $("form").height();
+
+$(".chat-box").css("height", "calc(100vh - " + (90 + formSize) + "px)");
 
 stompClient.connect({}, function () {
     document.getElementById("chat").innerHTML = "";
@@ -19,3 +22,8 @@ function send() {
 function show(data) {
     chat.innerHTML += "<div class=\"chat-box-message\">" + "[" + data.date + "]" + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.name + "<br>" + data.message + "</div>";
 }
+
+$(window).resize(function () {
+    var formSize = $("form").height();
+    $(".chat-box").css("height", "calc(100vh - " + (90 + formSize) + "px)");
+});
