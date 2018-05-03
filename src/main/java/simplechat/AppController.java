@@ -18,10 +18,7 @@ public class AppController {
         String message = data.getMessage();
         String time = getTime();
 
-        if (name.isEmpty()) {
-            name = "名無しのスーパーハッカー";
-        }
-
+        name = nameCheck(name);
         name = escape(name);
         message = escape(message);
 
@@ -39,5 +36,15 @@ public class AppController {
         LocalDateTime time = LocalDateTime.now();
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd - HH:mm:ss");
         return time.format(fmt);
+    }
+
+    private String nameCheck(String name) {
+        if (name.isEmpty()) {
+            return "名無しのスーパーハッカー";
+        } else if (name.equals(":none")) {
+            return "";
+        } else {
+            return name;
+        }
     }
 }
