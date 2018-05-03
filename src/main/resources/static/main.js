@@ -20,7 +20,7 @@ function send() {
 }
 
 function show(data) {
-    chat.innerHTML += "<div class=\"px-3 px-md-5 py-5\">" + "[" + data.date + "]" + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.name + "<br>" + data.message + "</div>";
+    chat.innerHTML += "<div class=\"px-3 px-md-5 py-4\">" + "[" + data.date + "]" + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.name + "<br>" + data.message + "</div>";
 }
 
 $(window).resize(function () {
