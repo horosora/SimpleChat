@@ -7,8 +7,15 @@ textarea {
 }
 
 .chat-box {
+    font-size: calc(3vw);
     overflow: auto;
     background-color: #ffffff;
+}
+
+@media screen and (min-width: 544px) {
+    .chat-box {
+        font-size: 1rem;
+    }
 }
 
 .chat-box::-webkit-scrollbar {
