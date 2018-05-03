@@ -11,13 +11,6 @@ textarea {
     background-color: #ffffff;
 }
 
-.chat-box-message {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-right: 3em;
-    padding-left: 3em;
-}
-
 .chat-box::-webkit-scrollbar {
     overflow: hidden;
     width: 8px;
