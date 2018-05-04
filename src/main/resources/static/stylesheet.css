@@ -12,7 +12,7 @@ textarea {
     background-color: #ffffff;
 }
 
-@media screen and (min-width: 544px) {
+@media screen and (min-width: 545px) {
     .chat-box {
         font-size: 1rem;
     }
