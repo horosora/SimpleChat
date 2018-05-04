@@ -1,7 +1,7 @@
 # Simple Chat
 It has neither the login function nor the chat saving function. It's simple, right?
 
-<img src="img/img1.png" width="50%">
+<img src="img/img1.png" width="80%">
 
 It's responsive design
 
