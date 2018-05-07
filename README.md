@@ -5,7 +5,7 @@ It has neither the login function nor the chat saving function. It's simple, rig
 
 It's responsive design
 
-<img src="img/img2.png" width="40%" alt="スマホ版デザイン">
+<img src="img/img2.png" width="35%" alt="スマホ版デザイン">
 
 ## Description
 ### Technology used
