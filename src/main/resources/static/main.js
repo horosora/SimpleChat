@@ -5,17 +5,17 @@ var formSize = $("form").height();
 $(".chat-box").css("height", "calc(100vh - " + (90 + formSize) + "px)");
 
 stompClient.connect({}, function () {
-    document.getElementById("chat").innerHTML = "";
+    $("#chat").html("");
     stompClient.subscribe("/topic/messages", function (message) {
         show(JSON.parse(message.body));
     });
 });
 
 function send() {
-    var name = document.getElementById("name").value;
-    var message = document.getElementById("message").value;
+    var name = $("#name").val();
+    var message = $("#message").val();
     stompClient.send("/app/endpoint", {}, JSON.stringify({"name": name, "message": message}));
-    document.getElementById("message").value = "";
+    $("#message").val("");
     $("#button").html("<button type=\"button\" class=\"btn btn-outline-secondary\" disabled onclick=\"send()\">send</button>");
 }
 
@@ -24,7 +24,7 @@ function show(data) {
 }
 
 $(window).resize(function () {
-    var formSize = $("form").height();
+    formSize = $("form").height();
     $(".chat-box").css("height", "calc(100vh - " + (90 + formSize) + "px)");
 });
 
