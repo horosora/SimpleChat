@@ -1,4 +1,4 @@
-package simplechat;
+package com.example.demo;
 
 public class DataToSend {
     private String name;

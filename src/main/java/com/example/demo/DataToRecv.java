@@ -1,4 +1,4 @@
-package simplechat;
+package com.example.demo;
 
 public class DataToRecv {
     private String name;
