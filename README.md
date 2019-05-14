@@ -14,7 +14,7 @@ It's responsive design
 1. Download SimpleChat.jar
 2. Execute the following command
 ```
-java -jar SimpleChat.jar
+$ java -jar SimpleChat.jar
 ```
 3. Access to`localhost:8080`
 
